@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "functions.h"
 #include "type1.h"
 #include "type2.h"
 #include "type3.h"
@@ -18,8 +19,13 @@ int main()
     const size_t len = 8;
 
     for (int i = 0; i < len; i++) {
-        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через пробел: " << endl;
-        cin >> A >> B >> C;
+        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через enter: " << endl;
+        cin >> A;
+        check_input();
+        cin >> B;
+        check_input();
+        cin >> C;
+        check_input();
         if (A == 0) {
             if (B == 0) {
                 if (C == 0) {
