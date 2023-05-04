@@ -19,7 +19,7 @@ void type8::Get_answer()
 
 void type8::show()
 {
-	cout << "Уравнение " << A << "*x^2 + " << B << "*x = 0" << endl;
+	cout << "Уравнение: " << A << "*x^2 + " << B << "*x = 0" << endl;
 }
 
 void type8::Get_answer_podbor()

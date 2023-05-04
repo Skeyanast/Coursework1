@@ -10,5 +10,5 @@ void type1::Get_answer()
 
 void type1::show()
 {
-	cout << "Уравнение 0 = 0" << endl;
+	cout << "Уравнение: 0 = 0" << endl;
 }

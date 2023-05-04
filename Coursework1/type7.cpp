@@ -15,5 +15,5 @@ void type7::Get_answer()
 
 void type7::show()
 {
-	cout << "Уравнение " << B << "*x = 0" << endl;
+	cout << "Уравнение: " << B << "*x = 0" << endl;
 }

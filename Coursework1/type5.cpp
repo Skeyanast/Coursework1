@@ -16,7 +16,7 @@ void type5::Get_answer()
 
 void type5::show()
 {
-	cout << "Уравнение " << B << "*x + " << C << " = 0" << endl;
+	cout << "Уравнение: " << B << "*x + " << C << " = 0" << endl;
 }
 
 void type5::Get_answer_podbor()

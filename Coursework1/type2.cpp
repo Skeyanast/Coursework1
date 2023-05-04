@@ -15,5 +15,5 @@ void type2::Get_answer()
 
 void type2::show()
 {
-	cout << "Уравнение " << A << "*x^2 = 0" << endl;
+	cout << "Уравнение: " << A << "*x^2 = 0" << endl;
 }

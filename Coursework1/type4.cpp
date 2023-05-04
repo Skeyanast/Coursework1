@@ -27,7 +27,7 @@ void type4::Get_answer()
 
 void type4::show()
 {
-	cout << "Уравнение " << A << "*x^2 + " << C << " = 0" << endl;
+	cout << "Уравнение: " << A << "*x^2 + " << C << " = 0" << endl;
 }
 
 void type4::Get_answer_podbor()

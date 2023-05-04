@@ -15,5 +15,5 @@ void type3::Get_answer()
 
 void type3::show()
 {
-	cout << C << " = 0" << endl;
+	cout << "Уравнение: " << C << " = 0" << endl;
 }

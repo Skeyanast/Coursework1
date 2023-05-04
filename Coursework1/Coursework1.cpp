@@ -15,66 +15,76 @@ int main()
     setlocale(LC_ALL, "Russian");
 
     double A, B, C;
+    const size_t len = 8;
 
-    cout << "Введите коэффициенты 1-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type1 eq1;
-
-    cout << "Введите коэффициенты 2-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type2 eq2(B);
-
-    cout << "Введите коэффициенты 3-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type3 eq3(C);
-
-    cout << "Введите коэффициенты 4-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type4 eq4(A, C);
-
-    cout << "Введите коэффициенты 5-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type5 eq5(B, C);
-
-    cout << "Введите коэффициенты 6-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type6 eq6(A, B, C);
-
-    cout << "Введите коэффициенты 7-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type7 eq7(B);
-
-    cout << "Введите коэффициенты 8-го уравнения A, B и C через пробел: " << endl;
-    cin >> A >> B >> C;
-    type8 eq8(A, B);
-
-    eq1.show();
-    eq1.Get_answer();
-
-    eq2.show();
-    eq2.Get_answer();
-
-    eq3.show();
-    eq3.Get_answer();
-
-    eq4.show();
-    eq4.Get_answer();
-    eq4.Get_answer_podbor();
-
-    eq5.show();
-    eq5.Get_answer();
-    eq5.Get_answer_podbor();
-
-    eq6.show();
-    eq6.Get_answer();
-    eq6.Get_answer_podbor();
-
-    eq7.show();
-    eq7.Get_answer();
-
-    eq8.show();
-    eq8.Get_answer();
-    eq8.Get_answer_podbor();
-
+    for (int i = 0; i < len; i++) {
+        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через пробел: " << endl;
+        cin >> A >> B >> C;
+        if (A == 0) {
+            if (B == 0) {
+                if (C == 0) {
+                    type1 eq;
+                    eq.show();
+                    eq.Get_answer();
+                    cout << endl;
+                }
+                else {
+                    type3 eq(C);
+                    eq.show();
+                    eq.Get_answer();
+                    cout << endl;
+                }
+            }
+            else {
+                if (C == 0) {
+                    type7 eq(B);
+                    eq.show();
+                    eq.Get_answer();
+                    cout << endl;
+                }
+                else {
+                    type5 eq(B, C);
+                    eq.show();
+                    eq.Get_answer();
+                    eq.Get_answer_podbor();
+                    cout << endl;
+                }
+            }
+        }
+        else {
+            if (B == 0) {
+                if (C == 0) {
+                    type2 eq(A);
+                    eq.show();
+                    eq.Get_answer();
+                    cout << endl;
+                }
+                else {
+                    type4 eq(A, C);
+                    eq.show();
+                    eq.Get_answer();
+                    eq.Get_answer_podbor();
+                    cout << endl;
+                }
+            }
+            else {
+                if (C == 0) {
+                    type8 eq(A, B);
+                    eq.show();
+                    eq.Get_answer();
+                    eq.Get_answer_podbor();
+                    cout << endl;
+                }
+                else {
+                    type6 eq(A, B, C);
+                    eq.show();
+                    eq.Get_answer();
+                    eq.Get_answer_podbor();
+                    cout << endl;
+                }
+            }
+        }
+    }
+     
     return 0;
 }

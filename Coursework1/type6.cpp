@@ -32,7 +32,7 @@ void type6::Get_answer()
 
 void type6::show()
 {
-	cout << "Уравнение " << A << "*x^2 + " << B << "*x + " << C << " = 0" << endl;
+	cout << "Уравнение: " << A << "*x^2 + " << B << "*x + " << C << " = 0" << endl;
 }
 
 void type6::Get_answer_podbor()
@@ -51,6 +51,6 @@ void type6::Get_answer_podbor()
 				x = i;
 			}
 		}
-		cout << "Приближенно, одни из корней уравнения: " << x << endl;
+		cout << "Приближенно, один из корней уравнения: " << x << endl;
 	}
 }
