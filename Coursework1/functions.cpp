@@ -12,6 +12,7 @@
 
 using namespace std;
 
+
 void check_input()
 {
     if (cin.fail()) {

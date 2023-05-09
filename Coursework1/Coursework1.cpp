@@ -11,7 +11,7 @@ int main()
     const size_t len = 8;
 
     for (int i = 0; i < len; i++) {
-        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через enter: " << endl;
+        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через пробел или enter: " << endl;
         cin >> A;
         check_input();
         cin >> B;
