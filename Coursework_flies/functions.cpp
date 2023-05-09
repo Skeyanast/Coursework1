@@ -124,7 +124,7 @@ void calculator()
     {
         double A, B, C;
         number++;
-        cout << "(" << number << ") " << "Введите коэффициенты уравнения A, B и C через пробел или enter: " << endl;
+        cout << "(" << number << ") " << "Введите коэффициенты уравнения A, B и C через Enter: " << endl;
         cin >> A;
         if (cin.fail()) {
             cin.clear();
