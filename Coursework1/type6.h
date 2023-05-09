@@ -10,4 +10,5 @@ public:
 	void Get_answer();
 	void show();
 	void Get_answer_podbor();
+	void Get_answer_vieta();
 };

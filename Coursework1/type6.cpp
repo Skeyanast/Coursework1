@@ -45,7 +45,7 @@ void type6::Get_answer_podbor()
 		double min = abs(0 - A * (-20) * (-20) - B * (-20) - C);
 		double x = -20;
 		for (double i = -20; i < 20.01; i += 0.01) {
-			double temp = abs(0 - A * (i) * (i)-B * i - C);
+			double temp = abs(0 - A * (i) * (i) - B * i - C);
 			if (temp < min) {
 				min = temp;
 				x = i;
@@ -53,4 +53,34 @@ void type6::Get_answer_podbor()
 		}
 		cout << "Приближенно, один из корней уравнения: " << x << endl;
 	}
+}
+
+void type6::Get_answer_vieta()
+{
+	double a = A;
+	double b = B;
+	double c = C;
+	if (abs(A) != 1) {
+		a = A / abs(A);
+		b = B / abs(A);
+		c = C / abs(A);
+	}
+	double x1, x2;
+	bool flag = false;
+	for (x1 = -20; x1 < 20.01; x1 += 0.01) {
+		for (x2 = -20; x2 < 20.01; x2 += 0.01) {
+			if (abs(x1 + x2 + B / A) <= 0.001 && abs(x1 * x2 - C / A) <= 0.001) {
+				if (x1 == x2) {
+					cout << "По теореме Виета, корень уравнения: " << endl
+						<< "X1 = " << x1 << endl;
+				}
+				else cout << "По теореме Виета, корни уравнения: " << endl
+					<< "X1 = " << x1 << endl
+					<< "X2 = " << x2 << endl;
+				flag = true;
+			}
+			if (flag) return;
+		}
+	}
+	cout << "По теореме Виета, корней уравнения нет!" << endl;
 }

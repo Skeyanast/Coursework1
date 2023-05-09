@@ -83,6 +83,7 @@ void initializer(double A, double B, double C)
                 eq.show();
                 eq.Get_answer();
                 eq.Get_answer_podbor();
+                eq.Get_answer_vieta();
                 cout << endl;
             }
         }
