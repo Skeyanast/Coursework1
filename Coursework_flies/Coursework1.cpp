@@ -7,21 +7,42 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    double A, B, C;
-    const size_t len = 8;
+    bool execution = true;
 
-    for (int i = 0; i < len; i++) {
-        cout << "Введите коэффициенты " << i + 1 <<  "-го уравнения A, B и C через пробел или enter: " << endl;
-        cin >> A;
-        check_input();
-        cin >> B;
-        check_input();
-        cin >> C;
-        check_input();
+    do {
+    system("cls");
+    menu();
 
-        initializer(A, B, C);
+    int way;
+    cin >> way;
+
+    if (cin.fail()) {
+        cin.clear();
+        ignore_line();
+    }
+    else {
+        ignore_line();
+    }
+
+    switch (way) {
+    case 1:
+        system("cls");
+        equation_types();
+        break;
+    case 2:
+        system("cls");
+        calculator();
+        break;
+    case 3:
+        cout << "Работа программы завершена." << endl;
+        execution = false;
+        break;
     }
     
+
+    } while (execution);
+    
+
     system("pause");
     return 0;
 }

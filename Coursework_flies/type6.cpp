@@ -15,16 +15,16 @@ void type6::Get_answer()
 {
 	double D = B * B - 4 * A * C;
 	if (D < 0) {
-		cout << "Уравнение не имеет действительных корней" << endl;
+		cout << "Уравнение не имеет действительных корней (D < 0)" << endl;
 	}
 	else if (D == 0) {
 		double x = ((-1) * B - sqrt(D)) / (2 * A);
-		cout << "Корень уравнения: " << x << endl;
+		cout << "Корень уравнения через дискриминант: " << x << endl;
 	}
 	else {
 		double x1 = ((-1) * B - sqrt(D)) / (2 * A);
 		double x2 = ((-1) * B + sqrt(D)) / (2 * A);
-		cout << "Корни уравнения: " << endl
+		cout << "Корни уравнения через дискриминант: " << endl
 			<< "X1 = " << x1 << endl
 			<< "X2 = " << x2 << endl;
 	}
@@ -39,7 +39,7 @@ void type6::Get_answer_podbor()
 {
 	double D = B * B - 4 * A * C;
 	if (D < 0) {
-		cout << "Уравнение не имеет действительных корней" << endl;
+		cout << "Методом подбора, действительных корней [-20; 20] нет" << endl;
 	}
 	else {
 		double min = abs(0 - A * (-20) * (-20) - B * (-20) - C);
