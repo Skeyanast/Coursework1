@@ -34,7 +34,7 @@ int main()
         calculator();
         break;
     case 3:
-        cout << "Работа программы завершена." << endl;
+        cout << endl << "Работа программы завершена." << endl << endl;
         execution = false;
         break;
     }
@@ -42,7 +42,6 @@ int main()
 
     } while (execution);
     
-
     system("pause");
     return 0;
 }
