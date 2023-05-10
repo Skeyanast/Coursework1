@@ -15,7 +15,6 @@ using namespace std;
 
 void ignore_line()
 {
-    // добавить в источники https://radioprog.ru/post/1153?ysclid=lhgpl9i6es331304238
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
@@ -90,10 +89,12 @@ void initializer(double A, double B, double C)
 
 void menu()
 {
-    cout << "\tМЕНЮ" << endl
+    cout << "\t\tМЕНЮ" << endl
+        << "-----------------------------------" << endl
         << "1. Типы квадратных уравнений" << endl
         << "2. Калькулятор квадратных уравнений" << endl
-        << "3. Выход из программы" << endl << endl;
+        << "3. Выход из программы" << endl
+        << "-----------------------------------" << endl << endl;
     cout << "Выберете пункт меню: ";
 }
 
@@ -111,15 +112,19 @@ void equation_types()
         << "7. Bx = 0." << endl
         << "8. Ax^2 + Bx = 0." << endl << endl
         << "Данная программа работает со всеми вышеперечисленными типами квадратных уравнений." << endl << endl;
-    //cout << "Для перехода к меню нажмите любую клавишу...";
     system("pause");
 }
 
 void calculator()
 {
-    cout << "2. КАЛЬКУЛЯТОР КВАДРАТНЫХ УРАВНЕНИЙ" << endl << endl;
+    cout << "2. КАЛЬКУЛЯТОР КВАДРАТНЫХ УРАВНЕНИЙ" << endl << endl
+        << "Правила использования калькулятора:" << endl
+        << "1. Ввод коэффициентов осуществляется через клавишу Enter." << endl
+        << "2. В случае некорректного ввода коэффициент считывается = 0, вводите аккуратно!" << endl << endl;
+
     bool flag = true;
-    size_t number = 0;
+    unsigned int number = 0;
+
     do
     {
         double A, B, C;
@@ -151,7 +156,8 @@ void calculator()
 
         initializer(A, B, C);
 
-        cout << "Если вы хотите найти корни еще одного уравнения, введите 1. Для перехода к меню введите любое другое значение." << endl;
+        cout << "Если вы хотите найти корни еще одного уравнения, введите 1." << endl
+            << "Для перехода к меню введите любое другое значение." << endl;
         int temp;
         cin >> temp;
         if (cin.fail()) {
@@ -165,4 +171,9 @@ void calculator()
         else cout << endl;
 
     } while (flag);
+}
+
+void exit_prog()
+{
+    cout << endl << "Работа программы завершена." << endl << endl;
 }

@@ -9,3 +9,5 @@ void menu();
 void equation_types();
 
 void calculator();
+
+void exit_prog();
