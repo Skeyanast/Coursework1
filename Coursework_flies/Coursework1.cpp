@@ -34,11 +34,10 @@ int main()
         calculator();
         break;
     case 3:
-        cout << endl << "Работа программы завершена." << endl << endl;
+        exit_prog();
         execution = false;
         break;
     }
-    
 
     } while (execution);
     
