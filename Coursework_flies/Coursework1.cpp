@@ -10,7 +10,6 @@ int main()
     bool execution = true;
 
     do {
-    system("cls");
     menu();
 
     int way;
@@ -26,16 +25,13 @@ int main()
 
     switch (way) {
     case 1:
-        system("cls");
         equation_types();
         break;
     case 2:
-        system("cls");
         calculator();
         break;
     case 3:
-        exit_prog();
-        execution = false;
+        exit_prog(execution);
         break;
     }
 

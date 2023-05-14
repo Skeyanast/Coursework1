@@ -89,6 +89,7 @@ void initializer(double A, double B, double C)
 
 void menu()
 {
+    system("cls");
     cout << "\t\tМЕНЮ" << endl
         << "-----------------------------------" << endl
         << "1. Типы квадратных уравнений" << endl
@@ -100,6 +101,7 @@ void menu()
 
 void equation_types()
 {
+    system("cls");
     cout << "1. ТИПЫ КВАДРАТНЫХ УРАВНЕНИЙ" << endl << endl
         << "Квадратное уравнение - это алгебраическое уравнение второй степени, общий вид которого: Ax^2 + Bx + C = 0." << endl << endl
         << "В зависимости от значений, которые могут принимать коэффициенты квадратного уравнения, можно выделить восемь типов квадратных уравнений:" << endl
@@ -117,6 +119,7 @@ void equation_types()
 
 void calculator()
 {
+    system("cls");
     cout << "2. КАЛЬКУЛЯТОР КВАДРАТНЫХ УРАВНЕНИЙ" << endl << endl
         << "Правила использования калькулятора:" << endl
         << "1. Ввод коэффициентов осуществляется через клавишу Enter." << endl
@@ -173,7 +176,8 @@ void calculator()
     } while (flag);
 }
 
-void exit_prog()
+void exit_prog(bool& execution)
 {
     cout << endl << "Работа программы завершена." << endl << endl;
+    execution = false;
 }
