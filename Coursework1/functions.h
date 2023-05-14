@@ -10,4 +10,4 @@ void equation_types();
 
 void calculator();
 
-void exit_prog();
+void exit_prog(bool& execution);
